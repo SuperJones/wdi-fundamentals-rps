@@ -71,7 +71,18 @@ function getWinner(playerMove,computerMove) {
     }
     return winner;
 
-
+    //ALTERNATE SOLUTION
+    /*
+    if (playerMove == computerMove){
+        winner = 'tie';
+    }else if (getPlayerMove = 'rock' && computerMove == 'scissors') || (getPlayerMove == 'scissors' && computerMove == 'paper') || 
+    (getPlayerMove == 'paper' && computerMove == 'rock'){
+        winner = 'player';
+    }else{
+        winner = 'computer';
+    }
+    return winner;
+    */
 
 function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
