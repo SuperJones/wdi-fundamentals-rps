@@ -70,20 +70,21 @@ getWinner();
 
 
 var playToFive = function() {
-    console.log("Let's play Rock, Paper, Scissors");
+    
     var playerWins = 0;
     var computerWins = 0;
-    
-    for(var i=5; playerWins<i || computerWins<i; i--){
-       var getWinner = 'computer';
+    console.log("Let's play Rock, Paper, Scissors, Go!");
+
+    for(var i=5; playerWins<=i || computerWins<=i; i--){
+        var winner = getWinner();
            /* YOUR CODE HERE */
-        if (getWinner === 'player'){
+        if (winner === 'player'){
             playerWins += 1;
-        } else if (getWinner === 'computer'){
+        } else if (winner === 'computer'){
             computerWins += 1;
         } else {
-            playerWins = playerWins;
-            computerWins = computerWins;
+            playerWins += 1;
+            computerWins += 1;
         }
     }    
     return [playerWins, computerWins];
