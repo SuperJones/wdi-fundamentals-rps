@@ -67,8 +67,8 @@ var playToFive = function() {
     var playerWins = 0;
     var computerWins = 0;
     console.log("Let's play Rock, Paper, Scissors, Go!");
-
-    while((playerWins <= 5) || (computerWins <= 5)){
+    //This was saying, "Continue to run while the player has less than 5 wins ​or​ the computer has less than 5 wins."
+    while((playerWins != 5) && (computerWins != 5)){
         var winner = getWinner();
            /* YOUR CODE HERE */
         if (winner === 'player'){
@@ -90,5 +90,4 @@ var playToFive = function() {
 };
 
 playToFive();
-
 
