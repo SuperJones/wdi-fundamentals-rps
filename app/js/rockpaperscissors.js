@@ -46,10 +46,16 @@ function getComputerMove(move) {
 }
 
 
-function getWinner() {
+function getWinner(playerMove, computerMove) {
     var winner;
-    var playerMove = getPlayerMove();
-    var computerMove = getComputerMove();
+    if (typeof playerMove === "undefined"){
+        playerMove = getInput();
+    }
+    console.log(playerMove);
+    
+    if (typeof computerMove === "undefined"){
+        computerMove = randomPlay();
+    }
     console.log('Player chose ' + playerMove + ' while Computer chose ' + computerMove);
     /* YOUR CODE HERE */
     if (playerMove === computerMove){
